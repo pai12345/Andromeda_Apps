@@ -1,0 +1,17 @@
+# vscode
+.vscode/
+
+# cache
+__pycache__/
+**.pyc
+
+# Docker
+Dockerfile
+
+# Misc
+.DS_Store
+README.md
+
+# Pipfiles
+Pipfile
+Pipfile.lock

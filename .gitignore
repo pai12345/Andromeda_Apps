@@ -1,0 +1,16 @@
+# Cache and Config
+__pycache__/
+.vscode/
+.pyc
+
+# Pipfiles
+Pipfile
+Pipfile.lock
+
+# archives
+**.zip
+**.gz
+**.tar
+
+# misc
+.DS_Store

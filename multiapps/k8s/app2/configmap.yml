@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm-app2
+  namespace: dev
+  labels:
+    name: cm-app2
+    type: app2
+data:
+  TARGET_HOST: "svc-app1.dev.svc.cluster.local"
+  TARGET_PORT: "8080"
