@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/pai12345/Andromeda_Apps/hello_world/go/util"
+	"fmt"
 )
 
 func main() {
-	util.PrintText("Hello World")
+	fmt.Println("Hello World")
 }
