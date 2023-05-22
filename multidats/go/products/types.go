@@ -7,4 +7,5 @@ type ProductsData struct {
 	Price       string
 	Currency    string
 	Tags        []string
+	ProductList []string
 }

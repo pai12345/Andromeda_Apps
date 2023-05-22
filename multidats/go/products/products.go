@@ -2,7 +2,13 @@ package products
 
 import "fmt"
 
-func (Products ProductsData) Generatedata() *ProductsData {
-	fmt.Println(&Products)
-	return &Products
+func (prods ProductsData) Generatedata() *ProductsData {
+	fmt.Println(&prods)
+	return &prods
+}
+
+func (prods ProductsData) AddProducts(prodlist []string) *[]string {
+	prodlist = append(prods.ProductList, prodlist...)
+	fmt.Println(&prodlist)
+	return &prodlist
 }
