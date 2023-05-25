@@ -22,7 +22,7 @@ func main() {
 	//incident
 	incident_instance := incident.Incident{
 		ID:          "INC_ANDR12345",
-		Alert:       alert_instance,
+		Alert:       &alert_instance,
 		Kind:        "Service",
 		Description: "Service Incident",
 		Tags:        map[string]string{"Kind": "Service", "type": "Incident", "squad": "Purchase Requisition"},
