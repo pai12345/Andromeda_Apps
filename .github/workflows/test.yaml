@@ -9,7 +9,9 @@ jobs:
         with:
           fetch-depth: 1
       - name: Get git logs
-        run: | 
+        run: |
           pwd
           ls
           git log --oneline
+      - name: Get files changed
+        run: git diff --merge-base --name-only
