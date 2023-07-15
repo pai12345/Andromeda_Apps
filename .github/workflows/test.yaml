@@ -14,4 +14,4 @@ jobs:
           ls
           git log --oneline
       - name: Get files changed
-        run: git diff --merge-base --name-only
+        run: git diff --name-only
