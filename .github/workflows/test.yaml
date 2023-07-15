@@ -12,6 +12,7 @@ jobs:
         run: |
           pwd
           ls
+          git branch
           git log --oneline
       - name: Get files changed
         run: git diff --name-only main
