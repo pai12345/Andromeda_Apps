@@ -10,4 +10,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Get comments
-        run: git diff origin/main HEAD
+        run: git diff origin/main HEAD --name-only
