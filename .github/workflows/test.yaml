@@ -14,8 +14,15 @@ jobs:
           ls
           git branch
           echo ${GITHUB_REF#refs/heads/}
-          git switch main 
           git remote -v
           git log --oneline
       - name: Get files changed
         run: git diff --name-only branch-test1
+      - name: Get changed files using defaults
+        id: changed-files
+        uses: tj-actions/changed-files@v32
+      - name: List all added files
+        run: |
+          for file in ${{ steps.changed-files.outputs. modified_files }}; do
+            echo "$file was modified."
+          done
