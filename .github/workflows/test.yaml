@@ -1,7 +1,6 @@
 name: Test Workflow
 on: 
-  pull_request_review_comment:
-    types: [created, edited]
+  issue_comment:
   pull_request:
     branches:
       - '*'
