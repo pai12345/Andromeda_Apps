@@ -17,4 +17,6 @@ jobs:
           git remote -v
           git log --oneline
       - name: Get files changed
-        run: git diff --name-only main
+        run: |
+        git switch main 
+        git diff --name-only branch-test1
