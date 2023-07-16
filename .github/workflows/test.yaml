@@ -1,7 +1,5 @@
 name: Test Workflow
-on: 
-  pull_request_review:
-    types: [submitted, edited]
+on: push
     
 jobs:
   test:
@@ -12,4 +10,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Get comments
-        run: echo ${{ github.event.comment.body }}
+        run: git diff origin/main HEAD
