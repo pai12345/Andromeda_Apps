@@ -14,9 +14,8 @@ jobs:
           ls
           git branch
           echo ${GITHUB_REF#refs/heads/}
+          git switch main 
           git remote -v
           git log --oneline
       - name: Get files changed
-        run: |
-        git switch main 
-        git diff --name-only branch-test1
+        run: git diff --name-only branch-test1
