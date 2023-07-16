@@ -1,12 +1,17 @@
 name: Test Workflow
 on: 
   issue_comment:
+    types:
+      - created
+      - edited
+  
   pull_request:
     branches:
       - '*'
 jobs:
   test:
     runs-on: ubuntu-22.04
+    if: ${{ github.event.comment.body == 'test3'}}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
