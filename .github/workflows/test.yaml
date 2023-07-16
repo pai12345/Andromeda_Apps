@@ -13,6 +13,7 @@ jobs:
           pwd
           ls
           git branch
+          echo ${GITHUB_REF#refs/heads/}
           git remote -v
           git log --oneline
       - name: Get files changed
