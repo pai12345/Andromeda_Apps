@@ -1,17 +1,14 @@
 name: Test Workflow
 on: push
+
 jobs:
   test:
     runs-on: ubuntu-22.04
     steps:
-      - name: fetch repo
+      - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 1
-      - name: Get git logs
+          fetch-depth: 0
+      - name: Get diff
         run: |
-          pwd
-          ls
-          git log --oneline
-      - name: Get files changed
-        run: git diff --name-only
+          bash ${GITHUB_WORKSPACE}/scripts/automation.sh
