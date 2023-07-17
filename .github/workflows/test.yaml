@@ -11,5 +11,4 @@ jobs:
           fetch-depth: 0
       - name: Get diff
         run: |
-          echo ${GITHUB_WORKSPACE}/scripts/automation.sh
-          git diff origin/main HEAD --name-only
+          bash ${GITHUB_WORKSPACE}/scripts/automation.sh
